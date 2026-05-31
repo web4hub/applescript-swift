@@ -227,6 +227,8 @@ Globals:
   Type: DWORD
 - Name: FILE_LIST_DIRECTORY
   Type: DWORD
+- Name: FILE_MAP_ALL_ACCESS
+  Type: DWORD
 - Name: FILE_MAP_READ
   Type: DWORD
 - Name: FILE_NAME_NORMALIZED
@@ -487,9 +489,27 @@ Globals:
   Type: UINT
 - Name: QS_ALLINPUT
   Type: UINT
+- Name: QS_HOTKEY
+  Type: UINT
 - Name: QS_INPUT
   Type: UINT
+- Name: QS_KEY
+  Type: UINT
 - Name: QS_MOUSE
+  Type: UINT
+- Name: QS_PAINT
+  Type: UINT
+- Name: QS_POINTER
+  Type: UINT
+- Name: QS_POSTMESSAGE
+  Type: UINT
+- Name: QS_RAWINPUT
+  Type: UINT
+- Name: QS_SENDMESSAGE
+  Type: UINT
+- Name: QS_TIMER
+  Type: UINT
+- Name: QS_TOUCH
   Type: UINT
 - Name: READ_CONTROL
   Type: DWORD
@@ -510,6 +530,16 @@ Globals:
 - Name: RRF_ZEROONFAILURE
   Type: DWORD
 - Name: SC_MANAGER_CONNECT
+  Type: DWORD
+- Name: SECTION_EXTEND_SIZE
+  Type: DWORD
+- Name: SECTION_MAP_EXECUTE
+  Type: DWORD
+- Name: SECTION_MAP_READ
+  Type: DWORD
+- Name: SECTION_MAP_WRITE
+  Type: DWORD
+- Name: SECTION_QUERY
   Type: DWORD
 - Name: SECURITY_BUILTIN_DOMAIN_RID
   Type: DWORD
@@ -629,13 +659,29 @@ Globals:
   Type: DWORD
 - Name: WSA_FLAG_OVERLAPPED
   Type: DWORD
+- Name: WS_BORDER
+  Type: UINT
+- Name: WS_CAPTION
+  Type: UINT
 - Name: WS_CHILD
   Type: DWORD
 - Name: WS_EX_LAYERED
   Type: DWORD
+- Name: WS_MAXIMIZEBOX
+  Type: UINT
+- Name: WS_MINIMIZEBOX
+  Type: UINT
+- Name: WS_OVERLAPPED
+  Type: UINT
 - Name: WS_OVERLAPPEDWINDOW
   Type: UINT
+- Name: WS_POPUP
+  Type: UINT
 - Name: WS_POPUPWINDOW
+  Type: UINT
+- Name: WS_SYSMENU
+  Type: UINT
+- Name: WS_THICKFRAME
   Type: UINT
 - Name: WT_EXECUTEDEFAULT
   Type: ULONG
