@@ -50,3 +50,19 @@ func borrowClass<T: IClassItem>(_ value: borrowing T) -> Builtin.RawPointer {
 func retainClass<T: IClassItem>(_ pointer: Builtin.RawPointer) -> T {
   Builtin.bridgeFromRawPointer(pointer)
 }
+
+// CHECK-LABEL: sil hidden [ossa] @$s{{.*}}4take{{.*}} : $@convention(thin) <T where T : IItem>
+// CHECK: [[ADDRESS:%.*]] = unchecked_addr_cast {{%.*}} : $*Builtin.RawPointer to $*T
+// CHECK-NEXT: copy_addr [take] [[ADDRESS]] to [init] %0 : $*T
+// CHECK: return
+func take<T: IItem>(_ pointer: Builtin.RawPointer) -> T {
+  Builtin.takeFromRawPointer(pointer)
+}
+
+// CHECK-LABEL: sil hidden [ossa] @$s{{.*}}4take{{.*}} : $@convention(thin) <T where T : IClassItem>
+// CHECK: [[ADDRESS:%.*]] = unchecked_addr_cast {{%.*}} : $*Builtin.RawPointer to $*T
+// CHECK-NEXT: copy_addr [take] [[ADDRESS]] to [init] %0 : $*T
+// CHECK: return
+func take<T: IClassItem>(_ pointer: Builtin.RawPointer) -> T {
+  Builtin.takeFromRawPointer(pointer)
+}
