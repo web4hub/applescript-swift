@@ -38,6 +38,8 @@ build the static libraries. Note that cross-compiling will require the use of
 -DCMAKE_AR=<path to llvm-ar>,\
 -DCMAKE_RANLIB=<path to llvm-ranlib>,\
 -DSWIFT_SDKS='OSX;WINDOWS'
+-DSWIFT_SDKS='LINUX;WINDOWS'
+DSWIFT_SDKS='XBASE;WINDOWS'
 ```
 
 #### Linux
